@@ -5,7 +5,8 @@ pipeline{
 	stage('Deploy') {
             steps {
 		sh '''
-		    oc project djropk-deploy-strategies oc start-build greeting-service --follow --wait
+		    oc project djropk-deploy-strategies
+		    oc start-build greeting-service --follow --wait
 		'''
 	    }
 	}
